@@ -1,11 +1,20 @@
 import React from 'react';
+import {Button, Text} from "../../atoms";
 
-const ButtonText: React.FC = () => {
+interface IButtonTextProps {
+    children: string | number | React.ReactNode | React.ReactNode[],
+
+    onClick: () => void,
+}
+
+const ButtonText: React.FC<IButtonTextProps> = ({children, onClick}) => {
     return (
-        <div>
-            
-        </div>
+        <Button onClick={onClick}>
+            <Text>
+                {children}
+            </Text>
+        </Button>
     );
 };
 
-export default ButtonText;
+export default React.memo(ButtonText);

@@ -1,11 +1,17 @@
 import React from 'react';
+import {Counter} from "../../organisms";
+import {useCounterContext} from "../../../components/provider/counterProvider";
+
 
 const CounterView: React.FC = () => {
-    return (
-        <div>
+    const {count} = useCounterContext()
 
-        </div>
+    return (
+        <>
+            {count}
+            <Counter />
+        </>
     );
 };
 
-export default CounterView;
+export default React.memo(CounterView);

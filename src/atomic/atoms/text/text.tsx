@@ -1,7 +1,7 @@
 import React from 'react';
 
 type IButtonProps = {
-    children: React.ReactNode;
+    children: string | number | React.ReactNode | React.ReactNode[];
 
     className?: string;
 }

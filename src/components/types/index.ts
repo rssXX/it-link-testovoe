@@ -1,5 +1,5 @@
-import { LayoutProps } from './interface'
+import type { LayoutProps } from './interface'
 
-export {
+export type {
     LayoutProps
 }

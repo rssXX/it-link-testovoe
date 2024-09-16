@@ -1,11 +1,20 @@
 import React from 'react';
+import {ButtonText} from "../../molecules";
+import {useCounterContext} from "../../../components/provider/counterProvider";
 
 const Counter: React.FC = () => {
-    return (
-        <div>
+    const { increment, decrement } = useCounterContext()
 
-        </div>
+    return (
+        <>
+            <ButtonText onClick={increment}>
+                Добавить
+            </ButtonText>
+            <ButtonText onClick={decrement}>
+                Отнять
+            </ButtonText>
+        </>
     );
 };
 
-export default Counter;
+export default React.memo(Counter);
